@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <style>
+      body{
+        background-color: #faf2e4;
+        margin: 0 10%;
+        font-family: sans-serif;
+      }
+      h1{
+        text-align: center;
+        font-family: serif;
+        font-weight: normal;
+        text-transform:  uppercase;
+        border-bottom: 1px solid #57b1dc;
+        margin-top: 30px;
+      }
+
+      h2{
+        fontface: "courier";
+        color: #0715cd;
+        font-size: 1em;
+      }
+      h3{
+        fontface: "courier";
+        color: #e00707;
+        font-size: 1em;
+      }
+      h4{
+        fontface: "courier";
+        color: #b536da;
+        font-size: 1em;
+      }
+      h5{
+        fontface: "courier";
+        color: #4ac925;
+        font-size: 1em;
+      }
+      p{
+        fontface: "courier";
+        background-color: #0e4603;
+        color: #ffffff;
+        font-size: 1.05em;
+      }
+      h6{
+
+      }
+    </style>
+    <meta charset="utf-8">
+    <title>actions and methods and inputs, oh my.</title>
+  </head>
+  <body>
+    <form action="/first/test/action.html" method="post">
+      <h2>
+        test post, i don't really care if you test this. whatever floats your boat!
+        <br>
+        <label>Test entry:
+          <input type="text" id="tester1" name="test stuff one">
+        </label>
+      </h2>
+    </form>
+    <br>
+    <br>
+    <form action="/second/test/action.php" method="get">
+      <h3>
+        testing this post will make you the coolest person ever not even ironically
+        <br>
+        <label>Test entry:
+          <input type="email" placeholder="email right here man" id="tester2" name="test stuff two">
+        </label>
+      </h3>
+    </form>
+    <br>
+    <br>
+    <form action="/third/test/action.php" method="get">
+      <h4>
+        It would be in your best interest to test this. Just some friendly advice.
+        <br>
+        <label>Test entry:
+          <input type="search"  id="tester3" name="test stuff three">
+        </label>
+        <button type="button" name="Submit."> This won't do anything. It's just a button.</button>
+
+      </h4>
+    </form>
+    <br>
+    <br>
+    <form action="/fourth/test/action.php" method="get">
+      <h5>
+        test the post!!! cmon!!! test it now!!! please :)
+        <br>
+        <label>Test entry:
+          <input type="checkbox" id="tester4" name="test stuff four">
+        </label>
+        <button type="reset" name="reset."> you can also click this to uncheck the button!!!.</button>
+      </h5>
+    </form>
+    <br>
+    <br>
+    <form action="/fifth/test/post/maybe.html" method="post">
+      <p>
+        How curious. Select one of the following options please.
+        <br>
+        <label>Test entry:
+        <select name="Favorite color" size="4" multiple>
+          <option>blue.</option>
+          <option>red</option>
+          <option>Purple.</option>
+          <option>green!!! :)</option>
+          <option>Me? Interesting.</option>
+        </select>
+        </label>
+        <button type="submit" name="Submit."> Press here to submit, if you would kindly..</button>
+      </p>
+    </form>
+    <br>
+    <br>
+    <form  action="/sixth/textarea/iguess.pdf" method="post">
+      <h6>
+        An interesting bunch. Wasn't it nice to meet them?
+        <br>
+        <label>Test entry:
+        <textarea name="yourthoughts" rows="8" cols="80">
+          Now, what were your thoughts, this time in more detail?
+        </textarea>
+        </label>
+      </h6>
+    </form>
+  </body>
+  </html>
