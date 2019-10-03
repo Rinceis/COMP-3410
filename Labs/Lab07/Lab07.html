@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <style>
+      body{
+        background-color: #faf2e4;
+        margin: 0 10%;
+        font-family: sans-serif;
+      }
+      h1{
+        text-align: center;
+        font-family: serif;
+        font-weight: normal;
+        text-transform:  uppercase;
+        border-bottom: 1px solid #57b1dc;
+        margin-top: 30px;
+      }
+
+      h2{
+        fontface: "courier";
+        color: #0715cd;
+        font-size: 1em;
+      }
+      h3{
+        fontface: "courier";
+        color: #e00707;
+        font-size: 1em;
+      }
+      h4{
+        fontface: "courier";
+        color: #b536da;
+        font-size: 1em;
+      }
+      h5{
+        fontface: "courier";
+        color: #4ac925;
+        font-size: 1em;
+      }
+      p{
+        fontface: "courier";
+        background-color: #0e4603;
+        color: #ffffff;
+        font-size: 1.05em;
+      }
+
+    </style>
+    <script type="text/javascript">
+      function validate1()
+      {
+        var phoneNumber = document.getElementById('tester1').value;
+        var phoneRGEX = /^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$/;
+        var phoneResult = phoneRGEX.test(phoneNumber);
+        alert("phone:"+phoneResult );
+      }
+      function validate2()
+      {
+        var foo = document.getElementById('tester2').value;
+        var fooRGEX = /foo*/;
+        var fooresult = fooRGEX.test(foo);
+        alert("foo"+fooresult)
+      }
+      function validate3()
+      {
+        var nothello = document.getElementById('tester3').value;
+        var nothelloRGEX = /^(?!.*hello).*$/;
+        var nothelloresult = nothelloRGEX.test(nothello);
+        alert("Not beginning with hello  = "+nothelloresult)
+      }
+      function validate4()
+      {
+        var beginre = document.getElementById('tester4').value;
+        var beginreRGEX = /\bre/;
+        var beginreresult = beginreRGEX.test(beginre);
+        alert("Beginning with re ="+beginreresult)
+      }
+      function validate5()
+      {
+        var roronumber = document.getElementById('tester5').value;
+        var roronumberRGEX = /r\d|o\d/;
+        var roronumberresult = roronumberRGEX.test(roronumber);
+        alert("r or o followed by a number ="+roronumberresult)
+      }
+      window.addEventListener('load', eventWindowLoaded, false);
+      function eventWindowLoaded() {
+        canvasApp();
+      }
+      function canvasApp() {
+        var theCanvas = document.getElementById('my_first_canvas');
+        var my_canvas = theCanvas.getContext('2d');
+        my_canvas.strokeRect(0,0,200,225)
+        // to start, draw a border around the canvas
+        //draw face
+        my_canvas.beginPath();
+        my_canvas.arc(100, 100, 75, (Math.PI/180)*0, (Math.PI/180)*360, false);
+        // circle dimensions
+        my_canvas.strokeStyle = "black"; // circle outline is black
+        my_canvas.lineWidth = 3; // outline is three pixels wide
+        my_canvas.fillStyle = "yellow"; // fill circle with yellow
+        my_canvas.stroke(); // draw circle
+        my_canvas.fill(); // fill in circle
+        my_canvas.closePath();
+        // now, draw left eye
+        my_canvas.fillStyle = "black"; // switch to black for the fill
+        my_canvas.beginPath();
+        my_canvas.arc(65, 70, 10, (Math.PI/180)*0, (Math.PI/180)*360, false);
+        // circle dimensions
+        my_canvas.stroke(); // draw circle
+        my_canvas.fill(); // fill in circle
+        my_canvas.closePath();
+        // now, draw right eye
+        my_canvas.beginPath();
+        my_canvas.arc(135, 70, 10, (Math.PI/180)*0, (Math.PI/180)*360, false);
+        // circle dimensions
+        my_canvas.stroke(); // draw circle
+        my_canvas.fill(); // fill in circle
+        my_canvas.closePath();
+        // draw smile
+        my_canvas.lineWidth = 6; // switch to six pixels wide for outline
+        my_canvas.beginPath();
+        my_canvas.arc(99, 120, 35, (Math.PI/180)*0, (Math.PI/180)*-180, false);
+        // semicircle dimensions
+        my_canvas.stroke();
+        my_canvas.closePath();
+        // Smiley Speaks!
+        my_canvas.fillStyle = "black"; // switch to black for text fill
+        my_canvas.font = '20px _sans'; // use 20 pixel sans serif font
+        my_canvas.fillText ("Hello Canvas!", 45, 200); // write text
+      }
+
+        </script>
+    <meta charset="utf-8">
+    <title>Lab7 stuff</title>
+  </head>
+  <body>
+    <canvas id="my_first_canvas" width="300" height="300">work please</canvas>
+
+
+
+    <h1>
+      <iframe src="about.html" width="800" height="800">
+        read the <a href="about.html">about page</a>
+      </iframe>
+    </h1>
+    <br>
+    <br>
+
+    <video src="sample_video.mp4" width="640" height="480" controls autoplay muted loop>
+      download the <a href="sample_video.mp4">mp4 file</a>
+    </video>
+    <br>
+    <br>
+
+    <audio src="karmapolice.mp3" controls preload="auto">
+      download the <a href="karmapolice.mp3"> mp3 file</a>
+    </audio>
+    <br>
+    <br>
+
+    <p>Hello</p>
+
+    <form action="" onsubmit="validate1()" method="post">
+      <h2>
+        <br>
+        <label>Test entry1:
+          <input type="text" height="5" width="50" id="tester1" name="test stuff one" placeholder="phone number"/> <br>
+          <input type="submit"/>
+        </label>
+      </h2>
+    </form>
+
+    <form action="" onsubmit="validate2()" method="get">
+      <h3>
+        <br>
+        <label>Test entry2:
+          <input type="text" height="5" width="50" id="tester2" name="test stuff two" placeholder="fo + any number of 'o's"> <br>
+          <input type="submit"/>
+        </label>
+      </h3>
+    </form>
+    <form action="" onsubmit="validate3()" method="post">
+      <h4>
+        <br>
+        <label>Test entry3:
+          <input type="text" height="5" width="50" id="tester3" name="test stuff three" placeholder="Anything without 'hello' in it"> <br>
+          <input type="submit"/>
+        </label>
+      </h4>
+    </form>
+    <form action="" onsubmit="validate4()" method="get">
+      <h2>
+        <br>
+        <label>Test entry4:
+          <input type="text" height="5" width="50"  id="tester4" name="test stuff four" placeholder="Something beginning with 're'"> <br>
+          <input type="submit"/>
+        </label>
+      </h2>
+    </form>
+    <form action="" onsubmit="validate5()" method="get">
+      <h2>
+        <br>
+        <label>Test entry5:
+          <input type="text" height="5" width="50" id="tester5" name="test stuff five" placeholder="contains r or o followed by a digit"> <br>
+          <input type="submit"/>
+        </label>
+      </h2>
+    </form>
+
+
+  </body>
+</html>
