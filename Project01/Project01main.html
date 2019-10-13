@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <style>
+  body{
+    background-color: #a7c2dd;
+    margin-left: 400px;
+    font-family: sans-serif;
+  }
+  h1{
+    text-align: center;
+    font-family: serif;
+    font-weight: normal;
+    text-transform:  uppercase;
+    border-bottom: 1px solid #57b1dc;
+    margin-top: 30px;
+  }
+
+  h2{
+    font-size: 1em;
+    background-color: #bed0e3;
+  }
+  h3{
+    background-color: #bed0e3;
+    font-size: .9em;
+  }
+  h4{
+
+  }
+  h5{
+    text-align: center;
+
+  }
+  h6{
+    background-color: #bed0e3;
+    font-size: .5em;
+  }
+  p{
+    background-color: #bed0e3;
+
+
+  }
+  .sidenav {
+    height: 100%;
+    width: 350px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #b7b0da;
+    overflow-x: hidden;
+    padding-top: 20px;
+    padding-left: 10px;
+  }
+  .sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  display: block;
+}
+
+  @media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 15px;}
+}
+
+  </style>
+  <script type="text/javascript">
+  function validateEmail(inputText)
+  {
+    var mailregex =  /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if (inputText.value.match(mailregex)) {
+      alert("that worked!")
+      return true;
+
+    }
+    else
+    {
+      alert("nope.");
+      return false;
+    }
+  }
+  function blue(){
+    document.getElementById("thistext").style.backgroundColor = "#4fbef9";
+    document.getElementById("thesubmitbutton").style.backgroundColor = "#4fbef9";
+
+  }
+  function green(){
+    document.getElementById("thistext").style.backgroundColor = "#9edb97";
+    document.getElementById("thesubmitbutton").style.backgroundColor = "#9edb97";
+
+  }
+  </script>
+  <meta charset="utf-8">
+  <title>Project 1 main page</title>
+</head>
+<body>
+  <div class="sidenav">
+    <nav>
+      <ul>
+        <li><a href="Project01main.html">Main page</a></li>
+        <li><a href="Project01pg2.html">Blog Entry #4: Courses suck!</a></li>
+        <li><a href="Project01pg3.html">Blog Entry #3: Going Back to School...</a></li>
+        <li><a href="Project01pg4.html">Blog Entry #2: Summer Roadtrip!</a></li>
+        <li><a href="Project01pg5.html">Blog Entry #1: Vacation Time!</a></li>
+      </ul>
+      <h4>
+      Thanks for visiting my blog! <br>I hope you have a good time while you're here!</h4>
+    </nav>
+</div>
+  <h1>
+    Welcome to my Blog Page!
+  </h1>
+  <hr>
+  <h5>
+    <img src="Images/mainpageimage.jpg" alt="An image showing the type of coding I do to create websites such as this one." width="300" height="200">
+  </h5>
+  <hr>
+  <br>
+  <h2>
+    This is essentially a mock-up of the kind of website
+    I would design if I or another person needed a personal website for their
+    blog, and was too cheap to use a professional website designer!
+  </h2>
+  <br>
+  <hr>
+  <h3>
+    A website like this would essentially be a template or very basic design to
+    show to a client interested in having their own website made. As we learn
+    more in class, the professionalism of the blog page will increase accordingly,
+    so hopefully this will look half-decent by the end of the year.
+    <br>
+    Feel free to go through the blog entries, I've filled out each of them!
+  </h3>
+
+  <footer>
+    <hr>
+    <p>
+    <form name="emailform" action="/mailinglist.php" method="post" id="theform">
+      <fieldset>
+        <legend>Mailing form</legend>
+      <h3 id="thistext">
+        <label id="thelabel">Enter your E-mail and name below for some great deals on blog design!
+          <br>
+          E-mail:<input type="text" height="5" width="50" name="Emailoffer" id="actualemail" onfocus="green()" placeholder="Email address" onclick=""/>
+          <br>
+          Name:<input type="text" height="5" width="50" name="fullname" id="thename" onfocus="blue()" placeholder="First and last name"/>
+          <br>
+          Submit Form!<input type="submit" name="submit" value="Submit" id="thesubmitbutton"  onclick="validateEmail(document.emailform.Emailoffer)"/>
+        </label>
+      </h3>
+      </fieldset>
+    </form>
+
+    <h6>
+      <a href="/Project01main.html">Back to Main Page</a>
+      <br>
+      Contact me through <a href="mailto:ryan.oleary@du.edu">my email address</a>
+      <br>
+      <br>
+      <br>
+      click on the email and name fields for a suprise
+    </h6>
+    </p>
+  </footer>
+
+</html>
