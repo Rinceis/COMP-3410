@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <style>
+  body{
+    background-color: #faf2e4;
+    margin: 0 10%;
+    font-family: sans-serif;
+  }
+  h1{
+    text-align: center;
+    font-family: serif;
+    font-weight: normal;
+    text-transform:  uppercase;
+    border-bottom: 1px solid #57b1dc;
+    margin-top: 30px;
+  }
+
+  h2{
+    fontface: "courier";
+    color: #0715cd;
+    font-size: 1em;
+  }
+  h3{
+    fontface: "courier";
+    color: #e00707;
+    font-size: 1em;
+  }
+  h4{
+    fontface: "courier";
+    color: #b536da;
+    font-size: 1em;
+  }
+  h5{
+    fontface: "courier";
+    color: #4ac925;
+    font-size: 1em;
+  }
+  p{
+    fontface: "courier";
+    background-color: #0e4603;
+    color: #ffffff;
+    font-size: 1.05em;
+  }
+
+  </style>
+  <script type="text/javascript">
+  function arrayfunc()
+  {
+    let array = ["puppy", "cat", "fish"];
+    alert(array);
+    let shownarray =
+    {
+      label: "your array",
+      size: 3,
+      thearray: array
+    }
+  }
+function constructor(name, age, pet, displayed)
+  {
+    this.name = name;
+    this.age = age;
+    this.pet = pet;
+    this.displayed = displayed;
+  }
+
+function callconstruct(){
+  var newform = new constructor('bob', '9', 'puppey', function(){
+    var constructionresult = 'info is ' + this.name + ", " + this.age + ", " + this.pet;
+    alert(constructionresult);
+  });
+  newform.displayed();
+}
+
+function callnewconstruct(){
+
+  constructor().prototype.haircolor = "blonde";
+
+  var newform = new constructor('bob', '9', 'puppey', function(){
+    var consresult = ' info and haircolor is ' + this.name + ", " + this.age + ", " + this.pet + ", " + this.haircolor;
+    alert(consresult);
+  });
+  newform.displayed();
+  confirm("ya got all that?");
+}
+
+
+  var water = {
+    form: 'liquid', temp: 'lukewarm', displays: function() {
+      alert(this.form + ", " + this.temp);
+    }
+
+  };
+  var userinfo = {
+    eyecolor: 'brown',
+    height: '6 feet',
+    siblingboysandgirls:['3', '3'],
+    displayinfo: function(){
+      alert(this.eyecolor + ", "+ this.height + ", " + this.siblingboysandgirls);
+    }
+  }
+
+  function newinfo(){
+    var someone = Object.create(userinfo);
+    someone.eyecolor = 'green';
+    someone.height = '7 feet';
+    someone.siblingboysandgirls = ['2 brothers', '1 sister'];
+    someone.displayinfo();
+  }
+  // window.onclick = constructor(document.getElementById(""),);
+
+function boiled(){
+  var boil = Object.create(water);
+  boil.displays();
+  boil.form = 'liquid';
+  boil.temp = 'Burning hot';
+  boil.displays();
+
+}
+
+
+
+function over(){
+  var thetext = document.getElementById("changing");
+  document.getElementById("changing").innerHTML ="Thanks for hovering over this, I couldn't find something interesting to do with addEventListener that wasn't also covered by the other functions, so have this!";
+}
+function wait(){
+  var thetext = document.getElementById("changing");
+  document.getElementById("changing").innerHTML = "Hey, come back to this window!!!";
+}
+window.onload=function(){
+  var changes = document.getElementById('changing');
+  if(changes){
+  changes.addEventListener("mouseover", over);
+  }
+}
+document.addEventListener("mouseleave", wait);
+
+
+
+
+  </script>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<body>
+
+
+  <form name="form" action="" method="post" id="theform">
+    <h3 id="thistext">
+        <br>
+        Click here to return an info set different from the original constructor!<input type="submit" name="submit" value="Submit" id="thesubmitbutton"  onclick="newinfo()"/>
+    </h3>
+  </form>
+  <form name="form" action="" method="post" onclick="callconstruct()"id="secondform">
+    <h3 id="thistext">
+        <br>
+        click here to call an info constructor different from the original mentioned above
+    </h3>
+  </form>
+  <form name="form" action="" method="post" onclick="callnewconstruct()"id="thirdform">
+    <h3 id="thistext">
+        <br>
+        click here to add a hairstyle to the info prior
+    </h3>
+  </form>
+  <form name="form" action="" method="post" id="fourthform">
+    <h3 id="thistext">
+        <br>
+        Click here to see a pot of water, then boil it!<input type="submit" name="submit" value="Submit" id="submit2"  onclick="boiled()"/>
+
+    </h3>
+  </form>
+  <br>
+  <br>
+  <h3 id="changing">
+      This text only shows up if you haven't moved your mouse over this text or out of the window!!
+  </h3>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+
+</body>
+</html>
