@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Lab 10</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      var allElements = $('*');
+      for(let i = 0; i<allElements.length; i++){
+        var currentElement = allElements[i];
+        // $(currentElement).click(function (){
+        //   console.log(this);
+        //   this.parentElement.removeChild(this);
+        //   return false;
+        // });
+
+      }
+      var createdelements = document.getElementsByTagName("input");
+      console.log(createdelements);
+      $(createdelements).click(function(){
+        for(let i = 0; i <createdelements.length; i++){
+          console.log(createdelements[i].title);
+          createdelements[i].setAttribute("title", "something else now"+i);
+          console.log(createdelements[i].title);
+
+        }
+      });
+
+      var h1s = document.getElementById("initialP");
+      console.log(h1s);
+      $("#initialP").click(function()
+      {
+        console.log(h1s.innerHTML);
+        h1s.innerHTML = "why did you click?";
+        console.log(h1s.innerHTML);
+        setTimeout(function() {
+        firstdivused.parentElement.removeChild(firstdivused);
+          h1s.innerHTML = "now look what you did. You removed the Helloworld thing!";
+        }, 5000);
+
+
+
+      });
+      var x =document.getElementById("body").querySelectorAll("h2");
+      console.log(x);
+
+    });
+    </script>
+  </head>
+  <body id="body">
+    <p id="initialP">initialize</p>
+
+    <div id="firstdivused"></div>
+    <div id="seconddivused">
+          <p id="secdivparagraph">sample paragraph texts </p>
+    </div>
+
+    <div id="thirddivused">
+          <div id='switchup'>this is a div value currently </div>
+          <br>
+          <br>
+          <div id='unused'> don't worry about this </div>
+    </div>
+
+    <div id="what">
+
+    </div>
+
+    <div id="the">
+    </div>
+
+    <div id="f">
+
+    </div>
+
+    <div id="udge">
+    </div>
+    <h2 id="extracreditfindthis">
+    </h2>
+
+  </body>
+  <script>
+    var test = document.getElementById("initialP").innerHTML;
+    console.log(test);
+    var test1 = document.getElementById("body").innerHTML;
+    console.log(test1);
+
+    document.getElementById("initialP").innerHTML = "<em> startvalue for the initial paragraph </em>";
+    document.getElementById("initialP").style.backgroundColor = "#21a642";
+
+    var divscript = document.getElementById("firstdivused");
+    var newParagraph = document.createElement("h1");
+    var copy = document.createTextNode("Hello, world!");
+
+    newParagraph.appendChild(copy);
+    divscript.appendChild(newParagraph);
+
+    var divscript1 = document.getElementById('seconddivused');
+    var paragraphvar = document.getElementById('secdivparagraph');
+
+    var thenewheading = document.createElement('h1');
+
+    var headingtext = document.createTextNode('a new heading')
+    thenewheading.appendChild(headingtext);
+    thenewheading.innerHTML = "a new heading";
+
+    divscript1.insertBefore(thenewheading, paragraphvar);
+
+    var divscript2 = document.getElementById('thirddivused');
+    var switchitup = document.getElementById('switchup');
+    var divscript2 = switchitup.parentElement;
+
+    var imagevar = document.createElement('img');
+    imagevar.setAttribute('src', 'doesntexist.jpg');
+    imagevar.setAttribute('alt', 'just a nonexistant image');
+
+    setTimeout(function() {
+      divscript2.replaceChild(imagevar, switchitup);
+    }, 5000);
+
+    var newthing = document.createElement("input");
+    var newthingtext = document.createTextNode("What...");
+    newthing.appendChild(newthingtext);
+    document.getElementById("what").appendChild(newthing);
+
+    var newerthing = document.createElement("input");
+    var newerthingtext = document.createTextNode("The...");
+    newerthing.appendChild(newerthingtext);
+    document.getElementById("the").appendChild(newerthing);
+
+    var newthing = document.createElement("input");
+    var newthingtext = document.createTextNode("F...");
+    newthing.appendChild(newthingtext);
+    document.getElementById("f").appendChild(newthing);
+
+    var newerthing = document.createElement("input");
+    var newerthingtext = document.createTextNode("udgesickles?");
+    newerthing.appendChild(newerthingtext);
+    document.getElementById("udge").appendChild(newerthing);
+
+  </script>
+</html>
