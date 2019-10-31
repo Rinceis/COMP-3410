@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+  h1 em, h5 em, h6 em{
+    color: olive;
+    text-decoration: overline;
+  }
+  h2 > b {
+    color: magenta;
+    text-transform: capitalize;
+  }
+  h3 + p {
+    color: cyan;
+    text-decoration: line-through;
+  }
+  h4 ~ h2 {
+    color: red;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+  }
+  #idselected {
+    color: orange;
+    text-align: right;
+    text-shadow: .25em .15em .3em silver;
+  }
+
+  p.classselected {
+    background-color: purple;
+    color: white;
+    line-height: .75em;
+  }
+  h3.secondselected {
+    text-indent: 40%;
+    background-color: yellow;
+    color: purple;
+  }
+  ul > li{
+    list-style-image: url(arrowicon.png);
+    list-style-type: square;
+    list-style-position: inside;
+    color: rgba(200, 60, 50, .5);
+    background-color: rgba(180, 220, 220, 1);
+
+  }
+  div{
+    color: #8A2BE2;
+  }
+
+  </style>
+  <title>Lecture 12!</title>
+</head>
+<body>
+  <p>
+    I'm a paragraph with <em style="font-family: impact;">emphasis </em>
+  </p>
+  <h1>test h1</h1>
+  <h1>h1 now has <em>em inside of it</em></h1>
+  <h2>test h2</h2>
+  <h2>h2 with <b>bold child</b></h2>
+  <h3>test h3</h3>
+  <h3>
+    <p>p in h3</p>
+  </h3>
+  <p>next sibling after h3+p</p>
+
+  <h2>h2 before h4</h2>
+  <h4>h4 creation</h4>
+  <h2>h2 after h4</h2>
+
+  <h5>test h5</h5>
+  <h5>h5 now has <em>em inside of it</em></h5>
+
+  <h6>test h6</h6>
+  <h6>h6 now has <em>em inside of it</em></h6>
+
+  <h3>
+    this is not inside the p idselected.
+    <p id="idselected"> This is, and is changed through the id selection process </p>
+  </h3>
+
+  <p>
+    this is the type selected,
+    <p class="classselected">and this is the class inside that is the selected element.</p>
+  </p>
+
+  <h3>
+    this is also an example of a type that is selected, but
+    <h3 class="secondselected"> this is the only class selected.
+    </h3>
+  </h3>
+
+  <ul>
+    <li> this is something</li>
+    <li> this is something</li>
+    <li> this is something with a rgba color</li>
+  </ul>
+
+<div>
+  this is div with a hex color
+</div>
+
+</body>
+</html>
