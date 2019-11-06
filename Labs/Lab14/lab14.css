@@ -1,0 +1,86 @@
+a:link{
+  color: maroon;
+}
+a:visited{
+  color: green;
+}
+a:focus{
+  background-color: orange;
+}
+a:hover{
+  background-color: #fde39a;
+}
+a:active{
+  background-color: #a3b661;
+}
+h3:only-of-type{
+  box-sizing:content-box;
+  width: 600px;
+  height: 600px;
+  font-size: 125%;
+  font-weight: bold;
+  color: navy;
+  background-image: url(cat.webp), url(bird.webp), radial-gradient(300px 300px, maroon, orange 30%, yellow);
+  background-position: right top, left bottom, center;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-attachment: scroll, scroll, scroll;
+}
+h5:first-of-type{
+  background-color: #25a59e;
+}
+h5:not(empty){
+  color: white;
+}
+
+
+h4:empty{
+background: content-box gray radial-gradient(300px 200px, orange, red 25%, purple) content-box center/100% no-repeat local;
+width: 500px;
+height: 500px;
+padding: 6px;
+border-image-source: url(bird.webp);
+border-image-slice: 30%;
+border-image-width: 50px;
+border-image-repeat:round;
+border-image-outset: 0px;
+border-radius: 300px;
+}
+
+p:before{
+  content: "this is the preamble: ";
+}
+h2:first-line{
+  letter-spacing: 6px;
+  color: orange;
+}
+h2::first-letter{
+  font-size: 500%;
+
+}
+
+h5[title="selectthis1"]{
+border: 3px solid black;
+}
+h6{
+  font-size: 100%;
+  border: 3px solid black;
+  width: 500px;
+  height: 150px;
+  overflow: scroll;
+}
+a[href$=".com/"]{
+  border: 3px solid black;
+}
+h1{
+  box-sizing:border-box;
+  width: 500px;
+  height: 500px;
+
+  background-image: url(pup.webp);
+  background-repeat: repeat;
+  background-position:  bottom center;
+  background-attachment: scroll;
+  background-size:
+  overflow: scroll;
+
+}
