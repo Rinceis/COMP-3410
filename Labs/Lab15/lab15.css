@@ -1,0 +1,137 @@
+a:link{
+  color: maroon;
+}
+a:visited{
+  color: green;
+}
+a:focus{
+  background-color: orange;
+}
+a:hover{
+  background-color: #fde39a;
+}
+a:active{
+  background-color: #a3b661;
+}
+p{
+  z-index: 5000;
+}
+p:last-of-type{
+  display: block;
+  width: 80vw;
+  margin:10px;
+  background-color: lightblue;
+  border:3px solid gray;
+}
+
+h1{
+  font-size: 100%;
+  font-weight: normal;
+  display:inline;
+}
+h2{
+  position: absolute;
+
+  top: 9em;
+  left: 4em;
+}
+
+h3{
+float: right;
+width: 300px;
+margin:10px;
+background-color: crimson;
+border: 2px solid black;
+}
+
+h4:empty{
+  clear: left;
+background: content-box gray radial-gradient(300px 200px, orange, red 25%, purple) content-box  center/100% no-repeat local;
+width: 500px;
+height: 500px;
+padding: 6px;
+border-image-source: url(bird.webp);
+border-image-slice: 30%;
+border-image-width: 50px;
+border-image-repeat:round;
+border-image-outset: 0px;
+border-radius: 300px;
+margin-top:-5em;
+z-index: 1
+}
+
+h5:nth-of-type(0){
+  background-color: #25a59e;
+}
+h5:nth-of-type(1){
+float:right;
+font-size: 100%;
+border: 3px solid green;
+background-color: lightgreen;
+display: inline;
+width:200px;
+box-sizing: border-box;
+}
+h5:nth-of-type(2){
+float:right;
+font-size: 100%;
+width:200px;
+display:inline-block;
+border: 3px solid green;
+background-color: lightgreen;
+box-sizing: border-box;
+}
+
+
+img{
+  margin: 2em;
+  position:relative;
+  top:5em;
+  padding:15px;
+  border: 3px solid green;
+  background-color: lightgreen;
+  box-shadow: 8px 8px 10px gray;
+}
+ul{
+  margin-top:1em;
+  margin
+  padding:0;
+  list-style-image: none;
+  position: fixed;
+  float: left;
+
+
+}
+ul li{
+  list-style-image: none;
+  margin-left: -20vw;
+}
+ul li a{
+  display: block;
+    list-style-image: none;
+  width: 200px;
+  text-align: center;
+  text-decoration: underline;
+  padding: 15px 15px;
+  margin: 10px;
+  margin-left: 100vw;
+   color: white;
+  background-color: darkgray;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+
+}
+a[href$=".com/"]{
+  border: 3px solid blue;
+}
+
+
+b{
+  margin: 3em;
+}
+em{
+  margin:2em;
+  display:block;
+}
