@@ -45,7 +45,6 @@ border-image-repeat:round;
 border-image-outset: 0px;
 border-radius: 300px;
 }
-
 p:before{
   content: "this is the preamble: ";
 }
