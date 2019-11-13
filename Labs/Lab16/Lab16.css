@@ -3,7 +3,7 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  height: 250px;
+  height: 200px;
   align-items: baseline;
   flex-grow: 1 0 25%;
 
@@ -12,7 +12,7 @@
  .box{
   flex: 1 0 0%;
   order:3;
-  height: 85px;
+  min-height: 50px;
 }
 .box5{
   flex: 3;
@@ -24,17 +24,17 @@
   align-self: center;
 }
 .box7{
-  flex: 1;
+  flex: 5;
   align-self: stretch;
 }
-
+/*
 #one { grid-area: header;}
 #two { grid-area: ads;}
 #three { grid-area: main;}
 #four { grid-area: links;}
 #five { grid-area: footer1;}
 #six { grid-area: footer2;}
-#seven { grid-area: footer3;}
+#seven { grid-area: footer3;} */
 
 #layout{
   display: grid;
@@ -43,15 +43,23 @@
   /* grid-template-columns: [ads] 200px [main] 400px [links] 200px; */
   grid-template-columns:200px  1fr  200px;
   grid-gap: 10px;
-  grid-template-areas:
+  /* grid-template-areas:
     "header header  header"
     "ads  main  links "
-    "footer1 footer2  footer3"
+    "footer1 footer2  footer3" */
 }
 
-.box2{
-  flex 1;
-  order: 3;
+.box8{
+  grid-area: 3 / 1 / 3 / span 2;
+
+}
+.box9{
+  grid-area: 1 / 1 / 2 / span 3;
+
+}
+.box10{
+  grid-area: 2 / 2 / 3 / span 2;
+
 }
 div[class="box box1"]{
   background-color: red;
