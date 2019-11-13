@@ -1,0 +1,103 @@
+
+#container{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  height: 250px;
+  align-items: baseline;
+  flex-grow: 1 0 25%;
+
+}
+
+ .box{
+  flex: 1 0 0%;
+  order:3;
+  height: 85px;
+}
+.box5{
+  flex: 3;
+  order: 1;
+  align-self: flex-end;
+}
+.box6{
+  flex: 4;
+  align-self: center;
+}
+.box7{
+  flex: 1;
+  align-self: stretch;
+}
+
+#one { grid-area: header;}
+#two { grid-area: ads;}
+#three { grid-area: main;}
+#four { grid-area: links;}
+#five { grid-area: footer1;}
+#six { grid-area: footer2;}
+#seven { grid-area: footer3;}
+
+#layout{
+  display: grid;
+  grid-template-rows:  100px  400px  100px;
+  /* grid-template-rows: [header-start] 100px [header-end content-start] 400px [footer-start] 100px; */
+  /* grid-template-columns: [ads] 200px [main] 400px [links] 200px; */
+  grid-template-columns:200px  1fr  200px;
+  grid-gap: 10px;
+  grid-template-areas:
+    "header header  header"
+    "ads  main  links "
+    "footer1 footer2  footer3"
+}
+
+.box2{
+  flex 1;
+  order: 3;
+}
+div[class="box box1"]{
+  background-color: red;
+}
+div[class="box box2"]{
+  background-color: orange;
+}
+div[class="box box3"]{
+  background-color: green;
+}
+div[class="box box4"]{
+  background-color: blue;
+}
+div[class="box box5"]{
+  background-color: purple;
+}
+div[class="box box6"]{
+  background-color: red;
+}
+div[class="box box7"]{
+  background-color: orange;
+}
+div[class="box2 box8"]{
+  background-color: green;
+}
+div[class="box2 box9"]{
+  background-color: blue;
+}
+div[class="box2 box10"]{
+  background-color: purple;
+}
+div[class="box2 box11"]{
+  background-color: red;
+}
+div[class="box2 box12"]{
+  background-color: orange;
+}
+div[class="box2 box13"]{
+  background-color: green;
+}
+div[class="box2 box14"]{
+  background-color: blue;
+}
+div[class="box2 box15"]{
+  background-color: purple;
+}
+div[class="box2 box16"]{
+  background-color: red;
+}

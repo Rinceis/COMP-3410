@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Project 1 main page</title>
+  <link rel="stylesheet" href="Project02.css">
+  <script type="text/javascript">
+
+  function over(){
+    var thetext = document.getElementById("changing");
+    document.getElementById("changing").innerHTML ="Why are you mousing over this, it isn't a link.";
+  }
+  function wait(){
+    var thetext = document.getElementById("changing");
+    document.getElementById("changing").innerHTML = "Hey, come back to my project!!!";
+  }
+  window.onload=function(){
+    var changes = document.getElementById('changing');
+    if(changes){
+    changes.addEventListener("mouseover", over);
+    document.body.addEventListener("mouseleave", wait);
+
+    }
+
+
+  }
+  document.addEventListener("mouseleave", wait);
+  function validateEmail(emailvalid, fullname, inputText)
+  {
+    var newline = "\r\n";
+    var nbsp = "\u00a0";
+    var mailregex =  /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if (emailvalid.value.match(mailregex)) {
+      alert("that worked!")
+
+      document.getElementById("placetopost").textContent+=(fullname.value + " : " + inputText.value);
+      document.getElementById("placetopost").innerHTML="<pre>" +document.getElementById("placetopost").innerHTML+"\n";
+      return true;
+    }
+    else
+    {
+      alert("nope.");
+      return false;
+    }
+  }
+  function blue(){
+    document.getElementById("thistext").style.backgroundColor = "#4fbef9";
+    document.getElementById("thesubmitbutton").style.backgroundColor = "#4fbef9";
+
+  }
+  function green(){
+    document.getElementById("thistext").style.backgroundColor = "#9edb97";
+    document.getElementById("thesubmitbutton").style.backgroundColor = "#9edb97";
+
+  }
+</script>
+</head>
+<body>
+  <div class="sidenav">
+    <nav>
+      <ul>
+        <li><a href="Project02main.html">Main page</a></li>
+        <li><a href="Project02pg2.html">Blog Entry #4: Courses suck!</a></li>
+        <li><a href="Project02pg3.html">Blog Entry #3: Going Back to School...</a></li>
+        <li><a href="Project02pg4.html">Blog Entry #2: Summer Roadtrip!</a></li>
+        <li><a href="Project02pg5.html">Blog Entry #1: Vacation Time!</a></li>
+      </ul>
+
+      <h4>
+      Thanks for visiting my blog! <br>I hope you have a good time while you're here!</h4>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <p>Ya ha ha! You found me! <br>
+      Have a video as a reward! </p>
+
+      <iframe src="https://www.youtube.com/embed/E39GIysMevQ" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    </nav>
+</div>
+
+  <h1 id="changing">
+    Blog Entry #1: Vacation time!
+  </h1>
+  <hr>
+  <h5 id="images">
+    <img src="Images/blogentry1.jpg" alt="a photo of a person watching the sunrise with arms outstretched, free." width="300" height="200">
+  </h5>
+  <hr>
+  <br>
+  <h2>
+    I'm finally free from school! expect a lot less updates on the blog for the
+    time being, since I'm finally going to be on summer break! Of course, I still
+    have work, but going through my shift without the pressure of schoolwork on
+    my shoulders will be easy compared to how it is during the rest of the year.
+    <br>
+    Even with work, I know I'll have a fun summer, and hopefully you will too!
+    Wish me luck!
+  </h2>
+  <br>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/0hYlvicxP40" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+  <p>
+  Actually... before I go, here's a video I want to share with you!
+  <br>
+  Enjoy!
+</p>
+
+</body>
+<footer>
+  <hr>
+    <form name="emailform" action="/mailinglist.php" method="post" id="theform">
+      <fieldset>
+        <legend>Mailing form</legend>
+      <h3 id="thistext">
+        <label id="thelabel">Enter your E-mail and name below to post a comment and sign up for our newsletter!
+          <br>
+          E-mail:<input type="text" height="5" width="50" name="Emailoffer" id="actualemail" onfocus="green()" placeholder="Email address" onclick=""/>
+          <br>
+          Name:<input type="text" height="5" width="50" name="fullname" id="thename" onfocus="blue()" placeholder="First and last name"/>
+          <br>
+          Post:<input type="text" height="25" width="300" name="posting" id="whattopost" placeholder="your post Here"
+          <br>
+          Submit Form!<input type="button" name="submit" value="Submit" id="thesubmitbutton"  onclick="validateEmail(document.emailform.Emailoffer, document.emailform.fullname, document.emailform.posting)"/>
+          <br>
+          Go to mailing list! (And submit comment)<input type="submit" name="submit" value="Submit" id="thesubmitbutton"  onclick="validateEmail(document.emailform.Emailoffer, document.emailform.fullname, document.emailform.posting)"/>        </label>
+      </h3>
+      </fieldset>
+    </form>
+    <h5 id="placetopost">
+
+    </h5>
+
+  <h6>
+    <a href="/Project02main.html">Back to Main Page</a>
+    <br>
+    Contact me through <a href="mailto:ryan.oleary@du.edu">my email address</a>
+    <br>
+    <br>
+    <br>
+    Click text next to or focus on the email and name fields for a surprise
+  </h6>
+</footer>
+</html>
